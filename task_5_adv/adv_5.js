@@ -5,10 +5,7 @@ while (!startValue || isNaN(startValue)) {
   startValue = +prompt("Введите начальное число:");
 }
 
-
-for (let i = startValue; i <= endValue; i++) {
-    let multy = i * endValue;
-    console.log(multy)
-  }
-
-  
+for (let i = 1; i <= endValue; i++) {
+  let multy = startValue * i;
+  console.log(startValue, "*", i, "=", multy);
+}
