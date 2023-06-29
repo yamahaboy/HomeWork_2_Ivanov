@@ -1,12 +1,18 @@
-let textHello = "пОлИнА нАбЕрЕжНаЯ";
-let changedTextHello = "";
+function searchWords(line) {
+  const stringLine = line.split(" ");
 
-for (let i = 0; i < textHello.length; i++) {
-  if (i === 0 || i === 7) {
-    changedTextHello += textHello[i].toUpperCase();
-  } else {
-    changedTextHello += textHello[i].toLowerCase();
-  }
+  const stringLineSearching = stringLine.map(
+    (words) => words.charAt(0).toUpperCase() + words.slice(1).toLowerCase()
+  );
+
+  const changeLine = stringLineSearching.join(" ");
+
+  return changeLine;
 }
 
-console.log("Привет,", changedTextHello, "!");
+const userLine = "пОлИнА нАбЕрЕжНаЯ";
+// const userLine = "кАк тВОи деЛА";
+const userLineCorrection = searchWords(userLine);
+const showLine = `Привет, ${userLineCorrection}!`;
+
+console.log(showLine);

@@ -1,20 +1,16 @@
-let tripWay = prompt("Куда хотите отправиться?");
+let tripWay = prompt("Куда хотите отправиться?").toLowerCase();
 
 switch (tripWay) {
   case "юг":
-  case "Юг":
     alert("На юг пойдешь счастье найдешь");
     break;
   case "север":
-  case "Север":
     alert("На север пойдешь много денег найдешь");
     break;
   case "запад":
-  case "Запад":
     alert("На запад пойдешь верного друга найдешь");
     break;
   case "восток":
-  case "Восток":
     alert("На восток пойдешь разработчиком станешь");
     break;
   default:

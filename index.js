@@ -16,15 +16,16 @@ while (!age || isNaN(age)) {
   age = prompt("Введите ваш возраст в годах:");
 }
 
-while (isMale == null) {
-  isMale = confirm("Ваш пол - мужской?");
-}
+const gender = confirm("Ваш пол - мужской?") ? "мужской" : "женский";
+// while (isMale == null) {
+//   isMale = confirm("Ваш пол - мужской?");
+// }
 let fullName = lastName + " " + firstName + " " + patronymic;
 
 let ageInDays = age * 365;
 let futureAge = +age + 5;
 
-let gender = isMale ? "мужской" : "женский";
+// let gender = isMale ? "мужской" : "женский";
 
 let retirementAge = isMale ? 65 : 55;
 let isRetired = age >= retirementAge ? "да" : "нет";
