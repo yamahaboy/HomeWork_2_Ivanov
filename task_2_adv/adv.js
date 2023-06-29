@@ -1,7 +1,7 @@
 let takeFirstNumber, takeAway, add, multiply, divide;
 
 while (!takeFirstNumber || isNaN(takeFirstNumber)) {
-  takeFirstNumber = prompt("Введите начальное число:");
+  takeFirstNumber = +prompt("Введите начальное число:");
 }
 
 while (!takeAway || isNaN(takeAway)) {
@@ -9,29 +9,17 @@ while (!takeAway || isNaN(takeAway)) {
 }
 
 while (!add || isNaN(add)) {
-  add = prompt("Сколько прибавить?");
+  add = +prompt("Сколько прибавить?");
 }
 while (!multiply || isNaN(multiply)) {
-  multiply = prompt("Сколько умножить?");
+  multiply = +prompt("Сколько умножить?");
 }
 while (!divide || isNaN(divide)) {
-  divide = prompt("Сколько разделить от предыдущего результата?");
+  divide = +prompt("Сколько разделить от предыдущего результата?");
 }
 
-let awayFirstMove = takeFirstNumber - takeAway;
+let answer = ((takeFirstNumber - takeAway + add) * multiply) / divide;
 
-let addSecondMove = +awayFirstMove + add;
-
-let multyPrev = addSecondMove * multiply;
-
-let divideAll = multyPrev % divide;
-
-console.log(awayFirstMove);
-
-console.log(addSecondMove);
-console.log(multyPrev);
-
-
-console.log(divideAll);
-
-
+alert(
+  `((((${takeFirstNumber} - ${takeAway}) + ${add}) * ${multiply}) / ${divide}) = ${answer}`
+);
